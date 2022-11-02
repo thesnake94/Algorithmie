@@ -1,0 +1,52 @@
+liste des options :
+jeu = [pierre, feuille, ciseaux]
+
+Attribuer une option aléatoire à l'ordinateur
+
+#Gardez le compte des points
+Pointsjoueur = 0
+Pointsordinateur = 0
+
+continuer = True
+
+#La boucle continue jusqu'à ce que la variable continuer est fausse
+while(continuer):
+    #Demander le choix de l'ordinateur
+    joueur = ecrit("pierre, papier, ciseaux? ou tapez Fin pour arrêter le jeu!\n")
+
+    #Vérification des scenarios
+    si (joueur == 'Fin'):
+        continuer = False
+    alors(joueur == ordinateur):
+        afficher("Egalité!")
+    alors(joueur == "pierre"):
+        si(ordinateur == "papier"):
+            afficher("Perdu!", ordinateur, "recouvre", joueur)
+            Pointsordinateur = Pointsordinateur + 1 
+        alors:
+            afficher("Gagné!", joueur, "écrase", ordinateur)
+            Pointsjoueur = Pointsjoueur + 1
+    alors(joueur == "papier"):
+        si(ordinateur == "ciseaux"):
+            afficher("Perdu!", ordinateur, "cut", joueur)
+            Pointsordinateur = Pointsordinateur + 1
+        alors:
+            afficher("You win!", joueur, "recouvre", ordinateur)
+            Pointsjoueur = Pointsjoueur + 1
+    alors(joueur == "ciseaux"):
+        si(ordinateur == "Rock"):
+            afficher("Perdu...", ordinateur, "écrase", joueur)
+            Pointsordinateur = Pointsordinateur + 1
+        alors:
+            afficher("Gagné!", joueur, "cut", ordinateur)
+            Pointsjoueur = Pointsjoueur + 1
+    si:
+        afficher("Votre choix n'est pas correct, vérifiez l'orthographe!")
+    #Attribuer une option aléatoire à l'ordinateur
+    ordinateur = jeu[randint(0,2)]
+    afficher('********Tour suivant********')
+
+#Impression des points
+afficher("********Points********")
+afficher("joueur: ", Pointsjoueur)
+afficher("ordinateur: ", Pointsordinateur)
