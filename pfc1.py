@@ -34,7 +34,7 @@ class player:
         self.name = name
         self.point = 0
         self.possibilites = ["pierre", "feuille", "ciseaux"]
-
+ 
     def score(self):
         print("Le joueur " +self.name + " possède un score de " + str(self.point)+" points\n")
     
