@@ -2,7 +2,7 @@ from player import player
 class Game:
     def __init__(self):
         self.parties = int(input("Combien de manche voulez vous jouer ? : \n"))
-        self.p1 = player(input("Entrez votre pseudo (premier joueur) : \n"))
+        self.p1 = player(input("Entrez votre pseudo (premier joueur ou bot pour bot) : \n"))
         self.p2 = player(input("Entrez votre pseudo (deuxième joueur ou bot pour bot) : \n"))
         self.possibilites = self.p1.possibilites
         print(f"Vous allez jouer au jeu : pierre, feuille, ciseaux. Vous allez jouer en {self.parties} points gagnant. \n")
