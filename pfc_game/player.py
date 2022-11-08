@@ -27,8 +27,8 @@ class player:
                 action = input(f"{self.name} choisissez votre coup : pierre, feuille ou ciseaux ? \n")
                 if action in self.possibilites:
                     e = False
-                    print(self.name + " a joué " + action + "\n")
+                    print("Le boss " + " a joué " + action + "\n")
                 else:
-                    print("Veuillez choisir entre pierre, feuille ou ciseaux !! \n")  
+                    print("Aymeric tu essaies de casser le code hein !! \n")  
                 
         return action
