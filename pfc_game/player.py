@@ -21,6 +21,17 @@ class player:
         if self.name == "bot":
             action = random.choice(["feuille", "pierre", "ciseaux"])
             print("Le bot a joué " + action +"\n") 
+            
+        if self.name == "aymeric":
+            e = True
+            while e:
+                action = input(f"{self.name} choisissez votre coup : pierre, feuille ou ciseaux ? \n")
+                if action in self.possibilites:
+                    e = False
+                    print("le boss " + "a joué " + action + "\n")
+                else: 
+                    print("Aymeric tu essaies de casser le code hein ! \n")
+                    
         else:
             e = True
             while e:
@@ -29,6 +40,6 @@ class player:
                     e = False
                     print(self.name + " a joué " + action + "\n")
                 else:
-                    print("Veuillez choisir entre pierre, feuille ou ciseaux !! \n")  
+                    print(self.name + " Veuillez choisir entre pierre, feuille ou ciseaux !! \n")  
                 
         return action
