@@ -3,7 +3,7 @@ import random
 class Game:
     def __init__(self):
         self.parties = int(input("Combien de manche voulez vous jouer ? : \n"))
-        self.p1 = player(input("Entrez votre pseudo (premier joueur) : \n"))
+        self.p1 = player(input("Entrez votre pseudo (premier joueur ou bot pour bot) : \n"))
         self.p2 = player(input("Entrez votre pseudo (deuxième joueur ou bot pour bot) : \n"))
         self.possibilites = self.p1.possibilites
         print(f"Vous allez jouer au jeu : pierre, feuille, ciseaux. Vous allez jouer en {self.parties} points gagnant. \n")
@@ -56,9 +56,9 @@ class player:
                 action = input(f"{self.name} choisissez votre coup : pierre, feuille ou ciseaux ? \n")
                 if action in self.possibilites:
                     e = False
-                    print(self.name + " a joué " + action + "\n")
+                    print("Le boss " + " a joué " + action + "\n")
                 else:
-                    print("Veuillez choisir entre pierre, feuille ou ciseaux !! \n")  
+                    print("Aymeric tu essaies de casser le code hein !! \n")  
                 
         return action
 
