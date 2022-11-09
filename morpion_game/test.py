@@ -9,7 +9,7 @@ spots = {1 : '1', 2 : '2', 3 : '3', 4 : '4', 5 : '5',
 class Game:
     def __init__(self):
         self.j1 = (input('Quel est le nom du premier joueur : \n'))
-        self.j2 = (input('Quel est le nom du deuxième joueur joueur : \n'))
+        self.j2 = (input('Quel est le nom du deuxième joueur : \n'))
         print(f'Bienvenue dans le jeu du Morpion !\n')
         self.playing = True
         self.turn = 0
